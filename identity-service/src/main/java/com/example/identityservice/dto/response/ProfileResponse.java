@@ -4,12 +4,22 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
+//public class ProfileResponse {
+//    String id;
+//    String identityNumber;
+//    String phoneNumber;
+//    String fullName;
+//    String username;
+////    List<Account> accounts;
+//}
+
 public class ProfileResponse {
     String id;
     String userId;

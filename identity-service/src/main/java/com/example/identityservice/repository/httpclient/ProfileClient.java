@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "profile-service", url = "${app.services.profile}")
+@FeignClient(name = "profile-service", url = "http://localhost:8002/profile")
 public interface ProfileClient {
     @PostMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
     ProfileResponse createProfile(@RequestBody ProfileCreationRequest request);

@@ -11,13 +11,16 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "\"cart\"")
+@Table(name = "cart")
 public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     String id;
-    float price;
-    int totalItems;
-    int totalPrice;
-
+    @Column(name="profile_id")
+    String profileId;
+    Integer totalItems;
+    Double totalPrice;
+    @OneToOne
+    @JoinColumn(name = "profile_id", insertable = false, updatable = false)
+    Profile profile;
 }

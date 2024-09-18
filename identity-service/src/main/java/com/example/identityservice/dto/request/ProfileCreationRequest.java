@@ -11,6 +11,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
+//public class ProfileCreationRequest {
+//    String username;
+//    String identityNumber;
+//    String phoneNumber;
+//    String fullName;
+//}
+
 public class ProfileCreationRequest {
     String userId;
     String firstName;

@@ -12,6 +12,7 @@ public class CartItemResponse {
     String id;
     String cartId;
     int productId;
+    double size;
     double price;
     int quantity;
 }
